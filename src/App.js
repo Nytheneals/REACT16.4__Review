@@ -1,7 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import logo from "./logo.svg";
-import BasicToggle from "./BasicToggle";
+import RenderToggleButton from "./Components/Renderprop/RenderToggleButton";
 import "./App.css";
 
 class App extends Component {
@@ -9,12 +7,16 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+          <h1 className="App-title">REACT 16.4 REVIEW</h1>
         </header>
-        <BasicToggle>
-          <h1>Hey You didn't do it bro </h1>
-        </BasicToggle>
+        <RenderToggleButton
+          render={({ on, toggle }) => (
+            <div>
+              <h1>{on && <div>It works</div>}</h1>
+              <button onClick={toggle}>Click this Render prop</button>
+            </div>
+          )}
+        />
       </div>
     );
   }
