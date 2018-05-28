@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 // import RenderToggleButton from "./Components/Renderprop/RenderToggleButton";
 import ChildrenRenderProps from "./Components/#3 ChildrenRenderProps/ChildrenRenderProps";
 
@@ -12,10 +12,10 @@ class App extends Component {
         </header>
         <ChildrenRenderProps>
           {({ on, toggle }) => (
-            <div>
+            <Fragment>
               <h1>{on && <div>It works</div>}</h1>
               <button onClick={toggle}>Click this Render prop</button>
-            </div>
+            </Fragment>
           )}
         </ChildrenRenderProps>
       </div>
