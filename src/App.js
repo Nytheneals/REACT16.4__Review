@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from "react";
 // import RenderToggleButton from "./Components/Renderprop/RenderToggleButton";
 import ChildrenRenderProps from "./Components/#3 ChildrenRenderProps/ChildrenRenderProps";
+import Portal from "./Components/#4 Portals/Portal";
 
 import "./App.css";
 class App extends Component {
@@ -15,6 +16,9 @@ class App extends Component {
             <Fragment>
               <h1>{on && <div>It works</div>}</h1>
               <button onClick={toggle}>Click this Render prop</button>
+              <Portal>
+                <h1>This is Our Portal</h1>
+              </Portal>
             </Fragment>
           )}
         </ChildrenRenderProps>
