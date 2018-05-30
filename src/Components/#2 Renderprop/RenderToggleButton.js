@@ -1,13 +1,13 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
 class RenderToggleButton extends Component {
   state = {
-    on: false
+    on: false,
   };
 
   toggle = () => {
     this.setState({
-      on: !this.state.on
+      on: !this.state.on,
     });
   };
 
